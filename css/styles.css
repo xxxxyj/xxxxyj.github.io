@@ -1,0 +1,294 @@
+* {
+    max-width: 100%;
+}
+
+/* Hero Heading Font */
+.unica-one-regular {
+  font-family: "Unica One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Body font */
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Heading font */
+.jetbrains-mono-regular {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #0b0f19;
+  color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #00e5ff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: #3b82f6;
+}
+
+header {
+  color: #f1f5f9;
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  list-style: none;
+  margin: 1rem;
+  border-bottom: ivory 2px solid;
+}
+
+header nav ul {
+  display: inline-flex;
+  font-family: JetBrains Mono;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+h1.who {
+  display: flex;
+  font-family: Unica One;
+  font-size: 8vw;
+  justify-content: center;
+  margin: 1rem;
+}
+
+div.row {
+  display: flex;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+div.about {
+  display:  block;
+  text-align: center;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+div.about > .row {
+  align-items: stretch;
+}
+
+div.facts {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+}
+
+div.facts img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  object-fit: contain;
+  margin: 1em auto;
+}
+
+.next {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid gainsboro;
+  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.next h1 {
+  font-size: 3rem;
+  font-family: JetBrains Mono;
+}
+
+.next p {
+  font-size: large;
+}
+
+h2, h3 {
+  font-family: JetBrains Mono;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  background-color: #0f172a;
+  margin: 1em;
+}
+
+p, h4 {
+  font-family: Inter;
+}
+
+.resumehead {
+  font-size: 3rem;
+  font-family: JetBrains Mono;
+  text-align: center;
+}
+
+.resume h2 {
+  font-size: 1.5rem;
+  font-family: JetBrains Mono;
+}
+
+div.row.resume {
+  align-items: flex-start;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.resume-history,
+.resume-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resume-skills {
+  margin-top: 2rem;
+}
+
+.resume-box {
+  border: 2px solid #334155;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: #0f172a;
+}
+
+.resume-box h3 {
+  margin-bottom: 0.5rem;
+}
+
+ol {
+  list-style: disc;
+}
+
+.links {
+  align-self: self-end;
+}
+
+.projects {
+  border: 2px solid #334155;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: #0f172a;
+  margin: 1rem;
+}
+
+.projects img {
+  border: 2px dashed #0f172a;
+  border-radius: 2rem;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
+
+.comingsoon {
+  border: 2px solid #334155;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: #0f172a;
+  margin: 1rem;
+  text-align: center;
+}
+
+.projecter h1 {
+  font-family: "JetBrains Mono";
+  text-align: center;
+}
+
+.contacthead h1 {
+  font-size: 4rem;
+  font-family: JetBrains Mono;
+  text-align: center;
+  margin: 1rem;
+}
+
+.contact-grid {
+  flex-direction: column;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #334155;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0rem 1rem 0rem;
+  background-color: #0f172a;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact:hover,
+.contact:focus-visible {
+  border-color: #00e5ff;
+  transform: translateY(-2px);
+  color: #f1f5f9;
+}
+
+.contact h1 {
+  font-size: 2.25rem;
+  font-family: Inter;
+  margin-bottom: 0.25rem;
+}
+
+.contact p {
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.contact img {
+  height: 5rem;
+  width: 5rem;
+  margin-right: 1.5rem;
+}
+
+footer {
+  border-top: 2px solid #334155;
+  margin-top: auto;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.facts {
+  border: 2px solid #334155;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #0f172a;
+  overflow-wrap: anywhere;
+}
