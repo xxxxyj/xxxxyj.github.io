@@ -28,21 +28,65 @@
 				<div class="col-12 projecter">
 					<h1>My Projects</h1>
 				</div>
-				<div class="row projects">
-					<div>
+				<div class="carousel" aria-label="Project carousel">
+					<div class="carousel-slide projects active">
 						<h2>TradeDeck (work in progress)</h2>
 						<p>A B2B solution for employers to easily monitor employees work-related licenses and their expiry dates.</p>
 						<img src="images/TradeDeck.png" alt="TradeDeck project preview">
 					</div>
-				</div>
-				<div class="row comingsoon">
-					<h3>More Projects Coming Soon</h3>
-					<p>While you wait, take a look at my <a href="resume.html">resume!</a></p>
+					<div class="carousel-slide comingsoon">
+						<h3>More Projects Coming Soon</h3>
+						<p>While you wait, take a look at my <a href="resume.html">resume!</a></p>
+					</div>
+					<div class="carousel-controls">
+						<button type="button" id="previousSlide" aria-label="Previous project">&#8592;</button>
+						<span id="slideNumber">1 / 2</span>
+						<button type="button" id="nextSlide" aria-label="Next project">&#8594;</button>
+					</div>
 				</div>
 			</div>
 			</main>
 		<footer>
-			<p>&copy; 2026 Yousef K <a href="https://www.flaticon.com/free-icons/letter-y" title="letter y icons">Favicon created by popo2021 - Found on Flaticon</a></p>
+			<p>
+				&copy; 2026 Yousef K
+				<span class="footer-links">
+					<a href="mailto:jai2147@gmail.com"><img src="images/whiteEnvelope.png" alt="" aria-hidden="true">Email</a>
+					<a href="https://www.linkedin.com/in/jai-kirkwood/" target="_blank" rel="noopener noreferrer"><img src="images/whiteLinkedin.png" alt="" aria-hidden="true">LinkedIn</a>
+					<a href="https://github.com/xxxxyj" target="_blank" rel="noopener noreferrer"><img src="images/whiteGithub.png" alt="" aria-hidden="true">GitHub</a>
+				</span>
+				<a href="https://www.flaticon.com/free-icons/letter-y" title="letter y icons">Favicon created by popo2021 - Found on Flaticon</a>
+			</p>
 		</footer>	
+	<script>
+		const slides = document.querySelectorAll(".carousel-slide");
+		const slideNumber = document.getElementById("slideNumber");
+		let currentSlide = 0;
+
+		function showSlide(index) {
+			if (index >= slides.length) {
+				currentSlide = 0;
+			} else if (index < 0) {
+				currentSlide = slides.length - 1;
+			} else {
+				currentSlide = index;
+			}
+
+			for (let i = 0; i < slides.length; i++) {
+				slides[i].classList.remove("active");
+			}
+
+			slides[currentSlide].classList.add("active");
+			slideNumber.textContent = (currentSlide + 1) + " / " + slides.length;
+		}
+
+		document.getElementById("previousSlide").addEventListener("click", function () {
+			showSlide(currentSlide - 1);
+		});
+
+		document.getElementById("nextSlide").addEventListener("click", function () {
+			showSlide(currentSlide + 1);
+		});
+	</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 	</body>
 </html>

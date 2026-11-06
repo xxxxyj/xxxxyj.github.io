@@ -179,6 +179,13 @@ div.row.resume {
   padding: 1rem;
   width: 100%;
   background-color: #0f172a;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.resume-box:hover {
+  border-color: #00e5ff;
+  transform: scale(1.05);
+  cursor: none;
 }
 
 .resume-box h3 {
@@ -208,6 +215,41 @@ ol {
   width: 100%;
   height: auto;
   max-width: 800px;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.carousel-controls button {
+  border: 2px solid #334155;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0f172a;
+  color: #00e5ff;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover,
+.carousel-controls button:focus-visible {
+  border-color: #00e5ff;
 }
 
 .comingsoon {
@@ -283,6 +325,22 @@ footer {
 
 footer p {
   margin: 0;
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  margin: 0 0.5rem;
+}
+
+.footer-links a {
+  margin: 0 0.25rem;
+}
+
+.footer-links img {
+  width: 0.9rem;
+  height: 0.9rem;
+  margin: 0 0.25rem 0 0;
+  vertical-align: middle;
 }
 
 .facts {
@@ -291,4 +349,11 @@ footer p {
   padding: 1rem;
   background-color: #0f172a;
   overflow-wrap: anywhere;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.facts:hover {
+  border-color: #00e5ff;
+  transform: scale(1.02);
+  cursor: none;
 }
